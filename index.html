@@ -17,13 +17,13 @@
 		  padding: 0px;
 		  margin: 0px; }
 
-		
+
 		/*	Właściwy CSS */
 		body {
 			background: #fff;
 			color: #000;
 		}
-		
+
 		a {
 			color: rgba(0, 0, 0, 0.7);
 			text-decoration: none;
@@ -46,7 +46,7 @@
 			text-align: center;
 			line-height: 1.2;
 		}
-		
+
 		header {
 			margin: 50px auto 70px auto;
 			width: 50px;
@@ -89,24 +89,29 @@
 
 <ul id="menu">
 	<li><a href="/fluffy-prune/canvasV2">Canvas (zepsute)</a></li>
-	<li><a href="/fluffy-prune/przecz/public">Przebiegi Czasowe</a></li>
+	<li><a href="/fluffy-prune/przecz/build/">Przebiegi Czasowe</a></li>
 </ul>
 
 <script>
-(function(){
-	var ul = document.getElementById("menu");
-	
-	ul.addEventListener('mouseenter', function(e) {
-		if(e.target.tagName == 'A'){ e.target.style.backgroundColor = 'rgb(' + randomRGB() + ')';
-		}
-	}, true);
-	ul.addEventListener('mouseleave', function(e) {
-		if(e.target.tagName == 'A') e.target.style.backgroundColor = '';
-	}, true);
+(function () {
+  var ul = document.getElementById('menu');
 
-	function randomRGB() {
-		return Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255);
-	}
+  ul.addEventListener('mouseenter', function (e) {
+    if (e.target.tagName == 'A') {
+      e.target.style.backgroundColor = 'rgb(' + randomRGB() + ')';
+    }
+  }, true);
+
+  ul.addEventListener('mouseleave', function (e) {
+    if (e.target.tagName == 'A') e.target.style.backgroundColor = '';
+  }, true);
+
+  function randomRGB() {
+    return Math.round(Math.random() * 255) + ',' +
+      Math.round(Math.random() * 255) + ',' +
+			Math.round(Math.random() * 255);
+  }
+
 })();
 </script>
 </body>
